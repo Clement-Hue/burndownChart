@@ -1,7 +1,10 @@
 import os
-from burndown import create_and_save, tasks_to_string, add_task, task_done
+from burndown import (create_and_save, tasks_to_string, add_task,
+    task_done, remove_task)
 
 import discord
+import json
+from datetime import datetime
 from discord.ext import commands
 from dotenv import load_dotenv
 
@@ -26,10 +29,17 @@ async def tasks(ctx):
 @bot.command()
 async def add(ctx, task, point):
     add_task(task, int(point))
+    await ctx.send("tâche ajouté")
 
 @bot.command()
-async def done(ctx, id):
-    task_done(int(id))
+async def done(ctx, id,date = None):
+    task_done(int(id), date)
+    await ctx.send(f"tache {id} mis à jour")
+
+@bot.command()
+async def remove(ctx, id):
+    remove_task(int(id))
+    await ctx.send(f"tache {id} retiré")
 
 
 bot.run(TOKEN, bot=True)

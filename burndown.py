@@ -3,42 +3,54 @@ from matplotlib.dates import (YEARLY, DateFormatter, date2num,
                               rrulewrapper, RRuleLocator, drange)
 import datetime
 from functools import reduce
+import json
 from datetime import date, timedelta
 
 class ID:
     cpt = 0
-    def __init__(self):
-        ID.cpt += 1
-        self.id = ID.cpt
 
-DEBUT = date(2021, 3, 12)
-FIN = date(2021, 3, 25)
-TASKS = [
-    {"id": ID(),"task": "menu gauche", "date": date(2021,3,15), "point": 5},
-    {"id": ID() ,"task": "ajout modif delete patient", "date": None, "point": 8},
-    {"id": ID(), "task": "ajout modif doc", "date": date(2021,3,15), "point": 5},
-    {"id":ID() ,"task": "ajout medecin", "date": None, "point": 3},
-    {"id":ID(), "task": "recherche patient", "date": None, "point": 3},
-    {"id":ID(), "task": "fiche patient / list appel", "date": None, "point": 5},
-    {"id": ID(), "task": "page alerte", "date": None, "point": 5},
-    {"id":ID() ,"task": "menu gauche", "date": date(2021,3,15), "point": 5},
-    {"id":ID() ,"task": "ajout modif delete staff", "date": None, "point": 8},
-    {"id":ID(), "task": "liste staff", "date": None, "point": 3},
-    {"id": ID() ,"task": "ajout modif delete appel", "date": None, "point": 3},
-    ]
+    @classmethod
+    def gen(cls):
+        cls.cpt += 1
+        return cls.cpt
+
+
+def to_date(date):
+    return datetime.datetime.strptime(date, '%Y-%m-%d').date()
+
+def write_data():
+    with open('test.json', 'w') as json_file:
+        json.dump({"debut": DEBUT, "fin": FIN, "tasks": TASKS}, json_file)
+
+def load_data(filename = "tasks.json"):
+    with open(filename) as json_file:
+        data = json.load(json_file)
+        for task in data["tasks"]:
+            if task["date"] is not None:
+                task["date"] = to_date(task["date"])
+        ID.cpt = data["tasks"][-1]["id"]
+        return to_date(data["debut"]), to_date(data["fin"]), data["tasks"]
+
+DEBUT, FIN, TASKS = load_data()
 
 def add_task(task, point):
-    TASKS.append({"id": ID(), "task": task, "point": point, "date": None})
+    TASKS.append({"id": ID.gen(), "task": task, "point": point, "date": None})
 
-def task_done(id):
-    task = next((task for task in TASKS if task["id"].id == id), None)
-    task["date"] = datetime.date.today()
+def task_done(id, date):
+    task = next((task for task in TASKS if task["id"] == id), None)
+    if not date:
+        task["date"] = datetime.date.today()
+    else:
+        task["date"] = to_date(date)
 
-    
+def remove_task(id):
+    task = next((task for task in TASKS if task["id"] == id), None)
+    TASKS.remove(task)
+
 def tasks_to_string():
     string = ''
     for task in TASKS:
-        string += f"id {task['id'].id} {task['task']} {task['point']} "
+        string += f"id {task['id']} {task['task']} {task['point']} "
         if task["date"]:
             string += f"fait le {task['date']}"
         string += '\n'
@@ -62,14 +74,17 @@ def create_courbe_effectif(tasks, story_point):
     plt.plot_date(dates, effectif, "r-")
 
 
-def create_and_save():
-    # tick every 5th easter
+def create_and_save(input = "tasks.json",output = "burndown"):
     formatter = DateFormatter('%m/%d/%y')
-
     STORY_POINT = get_number_storypoint(TASKS)
     fig, ax = plt.subplots()
     plt.plot_date([DEBUT, FIN], [STORY_POINT,0], "b-")
     create_courbe_effectif(TASKS, STORY_POINT)
     ax.xaxis.set_major_formatter(formatter)
     ax.xaxis.set_tick_params(rotation=30, labelsize=10)
-    plt.savefig(fname='burndown')
+    plt.savefig(fname=output)
+    return plt
+
+def show():
+    create_and_save().show()
+
