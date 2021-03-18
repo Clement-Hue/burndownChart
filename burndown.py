@@ -1,11 +1,9 @@
 import matplotlib.pyplot as plt
 from matplotlib.dates import (YEARLY, DateFormatter, date2num,
                               rrulewrapper, RRuleLocator, drange)
-import numpy as np
 import datetime
 from functools import reduce
 from datetime import date, timedelta
-import shortuuid
 
 class ID:
     cpt = 0
