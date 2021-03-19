@@ -1,10 +1,7 @@
 import os
-from burndown import (create_and_save, tasks_to_string, add_task,
-    task_done, remove_task)
-
 import discord
 from jsonLoader import JsonLoader
-from task import Task, ListTasks
+from task import Task
 from discord.ext import commands
 from dotenv import load_dotenv
 
