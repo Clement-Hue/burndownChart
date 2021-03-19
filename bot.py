@@ -3,8 +3,8 @@ from burndown import (create_and_save, tasks_to_string, add_task,
     task_done, remove_task)
 
 import discord
-import json
-from datetime import datetime
+from jsonLoader import JsonLoader
+from task import Task, ListTasks
 from discord.ext import commands
 from dotenv import load_dotenv
 
@@ -19,26 +19,32 @@ async def on_ready():
 
 @bot.command()
 async def chart(ctx):
-    create_and_save()
-    await ctx.send(file=discord.File('burndown.png'))
+    await ctx.send(file=discord.File('./burndown/ptrans.png'))
 
 @bot.command()
 async def tasks(ctx):
-    await ctx.send(tasks_to_string())
+    burden = JsonLoader("./data/tasks.json").load_burden()
+    await ctx.send(burden.listTask.__str__())
 
 @bot.command()
 async def add(ctx, task, point):
-    add_task(task, int(point))
+    loader = JsonLoader("./data/tasks.json")
+    burden = loader.load_burden()
+    burden.listTask.add_task(Task(task=task, point=int(point)))
     await ctx.send("tâche ajouté")
 
 @bot.command()
 async def done(ctx, id,date = None):
-    task_done(int(id), date)
+    loader = JsonLoader("./data/tasks.json")
+    burden = loader.load_burden()
+    burden.listTask.task_done(int(id), date)
     await ctx.send(f"tache {id} mis à jour")
 
 @bot.command()
 async def remove(ctx, id):
-    remove_task(int(id))
+    loader = JsonLoader("./data/tasks.json")
+    burden = loader.load_burden()
+    burden.listTask.remove_task((int(id)))
     await ctx.send(f"tache {id} retiré")
 
 

@@ -8,7 +8,7 @@
         {"id": 4 ,"task": "ajout medecin","date": null,  "point": 3},
         {"id": 5, "task": "recherche patient", "date": "2021-03-15", "point": 3},
         {"id": 6, "task": "fiche patient / list appel", "date": null,  "point": 5},
-        {"id": 7, "task": "page alerte", "date": null,  "point": 5},
+        {"id": 7, "task": "page alerte", "date": "2021-03-18",  "point": 5},
         {"id":8 ,"task": "ajout modif delete staff", "date": null,  "point": 8},
         {"id": 9, "task": "liste staff", "date": null, "point": 3},
         {"id": 10 ,"task": "ajout modif delete appel","date":null,  "point": 3}

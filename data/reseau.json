@@ -1,0 +1,13 @@
+{
+    "debut":"2021-02-09",
+    "fin": "2021-03-26",
+    "tasks": [
+        {"id": 1,"task": "authentification", "date": null, "point": 8},
+        {"id": 2,"task": "presentation", "date": null, "point": 5},
+        {"id": 3,"task": "lxc + openvpn", "date": "2021-03-03", "point": 13},
+        {"id": 4,"task": "cahier des charges", "date": "2021-02-14", "point": 5},
+        {"id": 5,"task": "openvpn server", "date": "2021-03-15", "point": 8},
+        {"id": 6,"task": "benchmark", "date": "2021-03-17", "point": 5},
+        {"id": 6,"task": "benchmark2", "date": null, "point": 3}
+    ]
+}
