@@ -41,6 +41,10 @@ class Burndown:
         plt.savefig(fname=f"./burndown/{output}")
         return plt
 
+
+    def progression(self):
+        return self.listTask.progression()
+
     def show(self, filename):
         self.create_chart(filename).show()
 

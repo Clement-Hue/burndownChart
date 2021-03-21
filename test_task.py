@@ -57,9 +57,9 @@ class TestTask(unittest.TestCase):
         liste = ListTasks([Task(id=4, task="ajout menu", point=8),
                           Task(id=5, task="ajout doc", point=5)
                           ])
-        liste.task_done(5)
+        liste.set_task_done(5)
         self.assertEqual(liste.tasks[1], Task(id=5, task="ajout doc", point=5, date=datetime.date.today()))
-        liste.task_done(4, datetime.date(2021, 3, 1))
+        liste.set_task_done(4, datetime.date(2021, 3, 1))
         self.assertEqual(liste.tasks[0], Task(id=4, task="ajout menu", point=8, date=datetime.date(2021, 3, 1)))
 
     @freeze_time("2021-03-19")
@@ -113,7 +113,32 @@ class TestTask(unittest.TestCase):
                                      "id 2 ajout modif delete patient 8\n"\
                                      "id 3 ajout modif doc 5\n"\
                                     "id 4 ajout medecin 8 Baba\n"\
-                                    "id 5 recherche patient 5 fait le 2021-03-15\n"
+                                    "id 5 recherche patient 5 fait le 2021-03-15\n"\
+                                    "progression: Coco 100.0% Baba 0.0%"
+    def test_list_person(self):
+        listTask = ListTasks([
+            Task(id=1, task="menu gauche", date=datetime.date(2021, 3, 13), point=5, assign="Cle"),
+            Task(id=2, task="ajout modif delete patient", date=None, point=8, assign="Coco"),
+            Task(id=3, task="ajout modif doc", date=datetime.date(2021, 3, 15), point=5, assign="Baba"),
+            Task(id=4, task="ajout medecin", date=datetime.date(2021, 3, 20), point=8, assign="Coco"),
+            Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=5,
+                 assign="Baba")])
+        assert listTask.list_person() == {"Cle","Baba","Coco"}
 
+    def test_progress_bar(self):
+        burndown = self.burdown_factory()
+        progress = burndown.progression()
+        assert progress == {"Baba": 100.0, "Coco": (13/21)*100 }
+
+    def burdown_factory(self):
+        return Burndown(debut=datetime.date(2021, 3, 12), fin=datetime.date(2021, 3, 20),
+                        listTask=ListTasks([
+                            Task(id=1, task="menu gauche", date=datetime.date(2021, 3, 13), point=5, assign="Coco"),
+                            Task(id=2, task="ajout modif delete patient", date=None, point=8, assign="Coco"),
+                            Task(id=3, task="ajout modif doc", date=datetime.date(2021, 3, 15), point=5, assign="Baba"),
+                            Task(id=4, task="ajout medecin", date=datetime.date(2021, 3, 20), point=8, assign="Coco"),
+                            Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=5,
+                                 assign="Baba"),
+                        ]))
 
 

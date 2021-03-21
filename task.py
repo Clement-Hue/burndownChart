@@ -46,6 +46,10 @@ class ListTasks:
         for task in self.tasks:
             string += task.__str__()
             string += "\n"
+        string += "progression:"
+        for person, percent in self.progression().items():
+            if person is not None:
+                string += f" {person} {percent}%"
         return string
 
     def add_task(self, task):
@@ -65,8 +69,44 @@ class ListTasks:
             point += task.point
         return point
 
-    def task_done(self, id, date=datetime.date.today()):
+    def set_task_done(self, id, date=datetime.date.today()):
         task = next((task for task in self.tasks if task.id == id), None)
         task.done(date)
         self.notify()
+
+    def list_person(self):
+        persons = set()
+        for task in self.tasks:
+            persons.add(task.assign)
+        return persons
+
+    def total_story_point_per_person(self):
+        story_point = {}
+        for task in self.tasks:
+            story_point[task.assign] = 0
+        for task in self.tasks:
+            story_point[task.assign] += task.point
+        return story_point
+
+    def story_point_per_person_done(self):
+        story_point = {}
+        for task in self.tasks:
+            story_point[task.assign] = 0
+        for task in self.tasks:
+            if task.date is not None:
+                story_point[task.assign] += task.point
+        return story_point
+
+    def progression(self):
+        total = self.total_story_point_per_person()
+        progress = self.story_point_per_person_done()
+        for person in progress:
+            progress[person] /= total[person]
+            progress[person] *= 100
+        return progress
+
+
+
+
+
 

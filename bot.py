@@ -37,7 +37,7 @@ async def add(ctx, task, point):
 async def done(ctx, id,date = None):
     loader = JsonLoader("./data/tasks.json")
     burden = loader.load_burden()
-    burden.listTask.task_done(int(id), date)
+    burden.listTask.set_task_done(int(id), date)
     await ctx.send(f"tache {id} mis à jour")
 
 @bot.command()
