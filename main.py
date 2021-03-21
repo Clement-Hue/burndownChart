@@ -5,4 +5,4 @@ DATA_FILE = sys.argv[1] if len(sys.argv) > 1 else "./data/tasks.json"
 if __name__ == "__main__":
     loader = JsonLoader(DATA_FILE)
     burden = loader.load_burden()
-    burden.show("ptrans")
+    burden.create_chart(sys.argv[2])

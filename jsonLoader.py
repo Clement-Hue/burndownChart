@@ -17,7 +17,8 @@ class JsonLoader:
             for task in data["tasks"]:
                 if task["date"] is not None:
                     task["date"] = self.to_date(task["date"])
-                tasks.append(Task(id=task["id"], task=task["task"], date=task["date"], point=task["point"]))
+                tasks.append(Task(id=task["id"], task=task["task"], date=task["date"], point=task["point"],
+                                  assign=task["assign"]))
             return Burndown(
                 debut=self.to_date(data["debut"]), fin=self.to_date(data["fin"]), listTask=ListTasks(tasks), loader=self)
 

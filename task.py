@@ -2,11 +2,12 @@ import datetime
 
 
 class Task:
-    def __init__(self, task:str, point: int, date=None, id=None):
+    def __init__(self, task:str, point: int, date=None, id=None, assign=None):
         self.id = id
         self.task = task
         self.date = date
         self.point = point
+        self.assign = assign
 
     def done(self, date):
         self.date = date
@@ -14,13 +15,15 @@ class Task:
     def __str__(self):
         string = ''
         string += f"id {self.id} {self.task} {self.point}"
+        if self.assign:
+            string += f" {self.assign}"
         if self.date:
             string += f" fait le {self.date}"
         return string
 
     def __eq__(self, other):
         return self.id == other.id and self.date == other.date and self.task == other.task and \
-               self.point == other.point
+               self.point == other.point and self.assign == other.assign
 
 
 class ListTasks:
