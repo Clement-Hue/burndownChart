@@ -96,7 +96,7 @@ class TestTask(unittest.TestCase):
                                 Task(id=4, task="ajout medecin", date=datetime.date(2021,3,20), point=8),
                                 Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=5),
                             ]))
-        burndown.create_plot("test")
+        burndown.create_chart("test")
         file = "./burndown/test.png"
         assert os.path.exists(file) is True
         os.remove(file)

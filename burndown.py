@@ -29,7 +29,7 @@ class Burndown:
             effectif.append(current)
         return effectif, dates
 
-    def create_plot(self, output):
+    def create_chart(self, output):
         formatter = DateFormatter('%m/%d/%y')
         fig, ax = plt.subplots()
         ax.xaxis.set_major_formatter(formatter)
@@ -42,7 +42,7 @@ class Burndown:
         return plt
 
     def show(self, filename):
-        self.create_plot(filename).show()
+        self.create_chart(filename).show()
 
 
 

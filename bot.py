@@ -16,6 +16,9 @@ async def on_ready():
 
 @bot.command()
 async def chart(ctx):
+    loader = JsonLoader("./data/tasks.json")
+    burden = loader.load_burden()
+    burden.create_chart("ptrans")
     await ctx.send(file=discord.File('./burndown/ptrans.png'))
 
 @bot.command()
