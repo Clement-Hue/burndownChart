@@ -113,8 +113,7 @@ class TestTask(unittest.TestCase):
                                      "id 2 ajout modif delete patient 8\n"\
                                      "id 3 ajout modif doc 5\n"\
                                     "id 4 ajout medecin 8 Baba\n"\
-                                    "id 5 recherche patient 5 fait le 2021-03-15\n"\
-                                    "progression: Coco 100.0% Baba 0.0%"
+                                    "id 5 recherche patient 5 fait le 2021-03-15\n"
     def test_list_person(self):
         listTask = ListTasks([
             Task(id=1, task="menu gauche", date=datetime.date(2021, 3, 13), point=5, assign="Cle"),

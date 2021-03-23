@@ -46,16 +46,12 @@ class ListTasks:
         for task in self.tasks:
             string += task.__str__()
             string += "\n"
-        string += "progression:"
-        for person, percent in self.progression().items():
-            if person is not None:
-                string += f" {person} {percent}%"
         return string
 
     def add_task(self, task):
         self.cpt += 1
-        self.tasks.append(task)
         task.id = self.cpt
+        self.tasks.append(task)
         self.notify()
 
     def remove_task(self, id):
