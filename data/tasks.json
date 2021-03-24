@@ -3,7 +3,7 @@
     "fin": "2021-03-25",
     "tasks": [
         {"id": 1,"task": "menu gauche", "date": "2021-03-15", "point": 5, "assign":"Baba"},
-        {"id": 2 ,"task": "ajout modif delete patient", "date": null,  "point": 8, "assign": "Coco"},
+        {"id": 2 ,"task": "ajout  delete patient", "date": "2021-03-23",  "point": 8, "assign": "Coco"},
         {"id": 3, "task": "ajout modif doc", "date": "2021-03-15", "point": 5, "assign": "Baba"},
         {"id": 4 ,"task": "ajout medecin","date": "2021-03-20",  "point": 3, "assign": "Coco"},
         {"id": 5, "task": "recherche patient", "date": "2021-03-15", "point": 3, "assign": "Baba"},
@@ -11,7 +11,7 @@
         {"id": 7, "task": "page alerte", "date": "2021-03-18",  "point": 5, "assign": "Baba"},
         {"id":8 ,"task": "ajout modif delete staff", "date": "2021-03-20",  "point": 8, "assign": "Baba"},
         {"id": 9, "task": "liste staff", "date": "2021-03-20", "point": 3, "assign": "Baba"},
-        {"id": 10 ,"task": "ajout modif delete appel","date":null,  "point": 3, "assign": "Coco"},
+        {"id": 10 ,"task": "ajout appel","date":"2021-03-23",  "point": 3, "assign": "Coco"},
         {"id": 11 ,"task": "historic","date":"2021-03-21",  "point": 3, "assign": "Baba"}
     ]
 }
