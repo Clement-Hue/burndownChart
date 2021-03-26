@@ -2,14 +2,16 @@
     "debut":"2021-03-27",
     "fin": "2021-04-06",
     "tasks": [
-        {"id": 1, "task": "coeur + interface: Afficher la liste des patient n'ayant pas encore été en staff", "date": null, "point": 3, "assign":null},
-        {"id": 2, "task": "interface: indicateur patient eligible + liste des doc dans liste patient + bouton ajout au prochain staff" , "date": null, "point": 5, "assign":null},
-        {"id": 3, "task": "coeur: nouveau usecase: ajout patient au prochain staff" , "date": null, "point": 5, "assign": null},
-        {"id": 4, "task": "coeur: Création de la liste des doc par défault à l'ajout d'un patient" , "date": null, "point": 3, "assign":null},
+        {"id": 1, "task": "coeur + interface: Afficher la liste des patient n'ayant pas encore été en staff", "date": null, "point": 3, "assign":"Baba"},
+        {"id": 2, "task": "interface: indicateur patient eligible + liste des doc dans liste patient + bouton ajout au prochain staff" , "date": null, "point": 5, "assign":"Baba"},
+        {"id": 3, "task": "coeur: nouveau usecase: ajout patient au prochain staff" , "date": null, "point": 5, "assign": "Clem"},
+        {"id": 4, "task": "coeur: Création de la liste des doc par défault à l'ajout d'un patient" , "date": null, "point": 3, "assign":"Clem"},
         {"id": 5, "task": "coeur: création nouvelle entité: événement et ses usecases" , "date": null, "point": 8, "assign":"Clem"},
-        {"id": 6, "task": "interface: Affichage des événement et réponse du staff dans fiche patient" , "date": null, "point": 8, "assign":null},
-        {"id": 7, "task": "coeur + interface: Ajouter degré d'urgence reponse" , "date": null, "point": 3, "assign":null},
+        {"id": 6, "task": "interface: Affichage des événement et réponse du staff dans fiche patient" , "date": null, "point": 8, "assign":"Coco"},
+        {"id": 7, "task": "coeur + interface: Ajouter degré d'urgence reponse" , "date": null, "point": 3, "assign":"Baba"},
         {"id": 8, "task": "interface: modif delete appel" , "date": null, "point": 5, "assign":"Coco"},
-        {"id": 9, "task": "interface: modif patient info" , "date": null, "point": 5, "assign":null}
+        {"id": 9, "task": "interface: modif patient info" , "date": null, "point": 5, "assign":"Coco"},
+        {"id": 10, "task": "coeur: Alerte événement n'ayant pas de date prévu" , "date": null, "point": 3, "assign":"Baba"},
+        {"id": 11, "task": "interface: amélioration de l'affichage de l'historique (pagination) et staff screening" , "date": null, "point": 5, "assign":"Coco"}
     ]
 }
