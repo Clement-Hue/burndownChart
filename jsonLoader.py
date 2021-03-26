@@ -1,6 +1,7 @@
 from task import Task, ListTasks
 from burndown import Burndown
 import datetime
+import ntpath
 import json
 
 class JsonLoader:
@@ -20,7 +21,8 @@ class JsonLoader:
                 tasks.append(Task(id=task["id"], task=task["task"], date=task["date"], point=task["point"],
                                   assign=task["assign"]))
             return Burndown(
-                debut=self.to_date(data["debut"]), fin=self.to_date(data["fin"]), listTask=ListTasks(tasks), loader=self)
+                debut=self.to_date(data["debut"]), fin=self.to_date(data["fin"]), listTask=ListTasks(tasks), loader=self,
+                image_file=f"./burndown/{ntpath.basename(self.filename).split('.')[0]}")
 
     def write_burden(self, burden:Burndown):
         def converter(o):

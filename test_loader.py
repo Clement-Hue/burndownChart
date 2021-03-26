@@ -48,8 +48,8 @@ class TestTask(unittest.TestCase):
                                               ]})
 
     def test_auto_write(self):
-        shutil.copyfile("test.json", "temp.json")
-        loader = JsonLoader("temp.json")
+        shutil.copyfile("test.json", "test/temp.json")
+        loader = JsonLoader("./test/temp.json")
         burden = loader.load_burden()
         burden.listTask.add_task(Task(task="page accueil", point=12, assign="Cle"))
         assert loader.load_burden().listTask == ListTasks([
@@ -76,4 +76,7 @@ class TestTask(unittest.TestCase):
             Task(id=4, task="ajout medecin", date=None, point=3, assign=None),
             Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=3, assign="Baba"),
         ])
-        os.remove("temp.json")
+        burden.create_chart()
+        assert os.path.isfile("./burndown/temp.png") == True
+        os.remove("./burndown/temp.png")
+        os.remove("test/temp.json")

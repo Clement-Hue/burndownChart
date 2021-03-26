@@ -8,12 +8,13 @@ from datetime import timedelta
 
 
 class Burndown:
-    def __init__(self, debut: datetime.date, fin: datetime.date, listTask: ListTasks, loader=None):
+    def __init__(self, debut: datetime.date, fin: datetime.date, listTask: ListTasks, loader=None, image_file=None):
         self.loader = loader
         self.debut = debut
         self.fin = fin
         self.listTask = listTask
         self.listTask.burden = self
+        self.image_file = image_file
 
     def notify(self):
         self.loader.write_burden(self)
@@ -29,7 +30,7 @@ class Burndown:
             effectif.append(current)
         return effectif, dates
 
-    def create_chart(self, output):
+    def create_chart(self):
         formatter = DateFormatter('%m/%d/%y')
         fig, ax = plt.subplots()
         ax.xaxis.set_major_formatter(formatter)
@@ -38,7 +39,7 @@ class Burndown:
         effectif, dates = self.create_courbe_effectif()
         plt.plot_date([self.debut, self.fin], [STORY_POINT, 0], "b-")
         plt.plot_date(dates,effectif, "r-")
-        plt.savefig(fname=f"./burndown/{output}")
+        plt.savefig(fname=self.image_file)
         return plt
 
 
@@ -48,8 +49,8 @@ class Burndown:
             string += f"{person}: {'{:.2f}'.format(percent)}% "
         return string
 
-    def show(self, filename):
-        self.create_chart(filename).show()
+    def show(self):
+        self.create_chart().show()
 
 
 

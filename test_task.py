@@ -88,6 +88,7 @@ class TestTask(unittest.TestCase):
 
     @freeze_time("2021-03-25")
     def test_save_plot(self):
+        file = "./burndown/test.png"
         burndown = Burndown(debut=datetime.date(2021, 3, 12), fin=datetime.date(2021, 3, 20),
                             listTask=ListTasks([
                                 Task(id=1, task="menu gauche", date=datetime.date(2021, 3, 13), point=5),
@@ -95,9 +96,8 @@ class TestTask(unittest.TestCase):
                                 Task(id=3, task="ajout modif doc", date=datetime.date(2021, 3, 15), point=5),
                                 Task(id=4, task="ajout medecin", date=datetime.date(2021,3,20), point=8),
                                 Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=5),
-                            ]))
-        burndown.create_chart("test")
-        file = "./burndown/test.png"
+                            ]), image_file=file)
+        burndown.create_chart()
         assert os.path.exists(file) is True
         os.remove(file)
 
@@ -140,5 +140,4 @@ class TestTask(unittest.TestCase):
                             Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=5,
                                  assign="Baba"),
                         ]))
-
 
