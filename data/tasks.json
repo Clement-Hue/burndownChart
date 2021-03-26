@@ -1,21 +1,15 @@
 {
-    "debut":"2021-03-09",
-    "fin": "2021-03-25",
+    "debut":"2021-03-27",
+    "fin": "2021-04-06",
     "tasks": [
-        {"id": 1,"task": "interface: menu gauche", "date": "2021-03-15", "point": 5, "assign":"Baba"},
-        {"id": 2 ,"task": "interface: ajout delete patient", "date": "2021-03-23",  "point": 8, "assign": "Coco"},
-        {"id": 3, "task": "interface: ajout modif doc", "date": "2021-03-15", "point": 5, "assign": "Baba"},
-        {"id": 4 ,"task": "interface: ajout medecin","date": "2021-03-20",  "point": 3, "assign": "Coco"},
-        {"id": 5, "task": "interface: recherche patient", "date": "2021-03-15", "point": 3, "assign": "Baba"},
-        {"id": 6, "task": "interface: fiche patient / list appel", "date": "2021-03-22",  "point": 5, "assign": "Coco"},
-        {"id": 7, "task": "interface: page alerte", "date": "2021-03-18",  "point": 5, "assign": "Baba"},
-        {"id":8 ,"task": "interface: ajout modif delete staff", "date": "2021-03-20",  "point": 8, "assign": "Baba"},
-        {"id": 9, "task": "interface: liste staff", "date": "2021-03-20", "point": 3, "assign": "Baba"},
-        {"id": 10 ,"task": "interface: ajout appel","date":"2021-03-23",  "point": 3, "assign": "Coco"},
-        {"id": 11 ,"task": "interface: historic","date":"2021-03-21",  "point": 3, "assign": "Baba"},
-        {"id": 12 ,"task": "coeur: l'historique","date":"2021-03-20",  "point": 5, "assign": "Clem"},
-        {"id": 13 ,"task": "coeur: usescases des alertes","date":"2021-03-10",  "point": 8, "assign": "Clem"},
-        {"id": 14 ,"task": "coeur: usescases des staff screening","date":"2021-03-11",  "point": 8, "assign": "Clem"},
-        {"id": 15 ,"task": "coeur: liste des alertes","date":"2021-03-15",  "point": 5, "assign": "Clem"}
+        {"id": 1, "task": "coeur + interface: Afficher la liste des patient n'ayant pas encore été en staff", "date": null, "point": 3, "assign":null},
+        {"id": 2, "task": "interface: indicateur patient eligible + liste des doc dans liste patient + bouton ajout au prochain staff" , "date": null, "point": 5, "assign":null},
+        {"id": 3, "task": "coeur: nouveau usecase: ajout patient au prochain staff" , "date": null, "point": 5, "assign": null},
+        {"id": 4, "task": "coeur: Création de la liste des doc par défault à l'ajout d'un patient" , "date": null, "point": 3, "assign":null},
+        {"id": 5, "task": "coeur: création nouvelle entité: événement et ses usecases" , "date": null, "point": 8, "assign":"Clem"},
+        {"id": 6, "task": "interface: Affichage des événement et réponse du staff dans fiche patient" , "date": null, "point": 8, "assign":null},
+        {"id": 7, "task": "coeur + interface: Ajouter degré d'urgence reponse" , "date": null, "point": 3, "assign":null},
+        {"id": 8, "task": "interface: modif delete appel" , "date": null, "point": 5, "assign":"Coco"},
+        {"id": 9, "task": "interface: modif patient info" , "date": null, "point": 5, "assign":null}
     ]
 }
