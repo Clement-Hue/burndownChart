@@ -43,7 +43,10 @@ class Burndown:
 
 
     def progression(self):
-        return self.listTask.progression()
+        string = ""
+        for person, percent in self.listTask.progression().items():
+            string += f"{person}: {'{:.2f}'.format(percent)}% "
+        return string
 
     def show(self, filename):
         self.create_chart(filename).show()

@@ -47,5 +47,11 @@ async def remove(ctx, id):
     burden.listTask.remove_task((int(id)))
     await ctx.send(f"tache {id} retiré")
 
+@bot.command()
+async def progress(ctx ):
+    loader = JsonLoader("./data/tasks.json")
+    burden = loader.load_burden()
+    await ctx.send(burden.progression())
+
 
 bot.run(TOKEN, bot=True)

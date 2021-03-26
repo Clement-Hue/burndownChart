@@ -1,17 +1,21 @@
 {
-    "debut":"2021-03-12",
+    "debut":"2021-03-09",
     "fin": "2021-03-25",
     "tasks": [
-        {"id": 1,"task": "menu gauche", "date": "2021-03-15", "point": 5, "assign":"Baba"},
-        {"id": 2 ,"task": "ajout  delete patient", "date": "2021-03-23",  "point": 8, "assign": "Coco"},
-        {"id": 3, "task": "ajout modif doc", "date": "2021-03-15", "point": 5, "assign": "Baba"},
-        {"id": 4 ,"task": "ajout medecin","date": "2021-03-20",  "point": 3, "assign": "Coco"},
-        {"id": 5, "task": "recherche patient", "date": "2021-03-15", "point": 3, "assign": "Baba"},
-        {"id": 6, "task": "fiche patient / list appel", "date": "2021-03-22",  "point": 5, "assign": "Coco"},
-        {"id": 7, "task": "page alerte", "date": "2021-03-18",  "point": 5, "assign": "Baba"},
-        {"id":8 ,"task": "ajout modif delete staff", "date": "2021-03-20",  "point": 8, "assign": "Baba"},
-        {"id": 9, "task": "liste staff", "date": "2021-03-20", "point": 3, "assign": "Baba"},
-        {"id": 10 ,"task": "ajout appel","date":"2021-03-23",  "point": 3, "assign": "Coco"},
-        {"id": 11 ,"task": "historic","date":"2021-03-21",  "point": 3, "assign": "Baba"}
+        {"id": 1,"task": "interface: menu gauche", "date": "2021-03-15", "point": 5, "assign":"Baba"},
+        {"id": 2 ,"task": "interface: ajout delete patient", "date": "2021-03-23",  "point": 8, "assign": "Coco"},
+        {"id": 3, "task": "interface: ajout modif doc", "date": "2021-03-15", "point": 5, "assign": "Baba"},
+        {"id": 4 ,"task": "interface: ajout medecin","date": "2021-03-20",  "point": 3, "assign": "Coco"},
+        {"id": 5, "task": "interface: recherche patient", "date": "2021-03-15", "point": 3, "assign": "Baba"},
+        {"id": 6, "task": "interface: fiche patient / list appel", "date": "2021-03-22",  "point": 5, "assign": "Coco"},
+        {"id": 7, "task": "interface: page alerte", "date": "2021-03-18",  "point": 5, "assign": "Baba"},
+        {"id":8 ,"task": "interface: ajout modif delete staff", "date": "2021-03-20",  "point": 8, "assign": "Baba"},
+        {"id": 9, "task": "interface: liste staff", "date": "2021-03-20", "point": 3, "assign": "Baba"},
+        {"id": 10 ,"task": "interface: ajout appel","date":"2021-03-23",  "point": 3, "assign": "Coco"},
+        {"id": 11 ,"task": "interface: historic","date":"2021-03-21",  "point": 3, "assign": "Baba"},
+        {"id": 12 ,"task": "coeur: l'historique","date":"2021-03-20",  "point": 5, "assign": "Clem"},
+        {"id": 13 ,"task": "coeur: usescases des alertes","date":"2021-03-10",  "point": 8, "assign": "Clem"},
+        {"id": 14 ,"task": "coeur: usescases des staff screening","date":"2021-03-11",  "point": 8, "assign": "Clem"},
+        {"id": 15 ,"task": "coeur: liste des alertes","date":"2021-03-15",  "point": 5, "assign": "Clem"}
     ]
 }

@@ -127,7 +127,7 @@ class TestTask(unittest.TestCase):
     def test_progress_bar(self):
         burndown = self.burdown_factory()
         progress = burndown.progression()
-        assert progress == {"Baba": 100.0, "Coco": (13/21)*100 }
+        assert progress == f"Coco: {'{:.2f}'.format((13/21)*100)}% Baba: 100.00% "
 
     def burdown_factory(self):
         return Burndown(debut=datetime.date(2021, 3, 12), fin=datetime.date(2021, 3, 20),
