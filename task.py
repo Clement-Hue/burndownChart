@@ -46,6 +46,10 @@ class ListTasks:
         for task in self.tasks:
             string += task.__str__()
             string += "\n"
+        for person, story_point in self.total_story_point_per_person().items():
+            if person is None:
+                person = "Général"
+            string += f"{person} {story_point} points "
         return string
 
     def add_task(self, task):
@@ -92,6 +96,7 @@ class ListTasks:
             if task.date is not None:
                 story_point[task.assign] += task.point
         return story_point
+
 
     def progression(self):
         total = self.total_story_point_per_person()

@@ -104,16 +104,17 @@ class TestTask(unittest.TestCase):
     def test_list_task(self):
         listTask = ListTasks([
             Task(id=1, task="menu gauche", date=datetime.date(2021, 3, 13), point=5, assign="Coco"),
-            Task(id=2, task="ajout modif delete patient", date=None, point=8),
-            Task(id=3, task="ajout modif doc", date=None, point=5),
+            Task(id=2, task="ajout modif delete patient", date=None, point=8, assign="Baba"),
+            Task(id=3, task="ajout modif doc", date=None, point=5, assign="Coco"),
             Task(id=4, task="ajout medecin", date=None, point=8, assign="Baba"),
             Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=5),
         ])
         assert listTask.__str__() == "id 1 menu gauche 5 Coco fait le 2021-03-13\n" \
-                                     "id 2 ajout modif delete patient 8\n"\
-                                     "id 3 ajout modif doc 5\n"\
+                                     "id 2 ajout modif delete patient 8 Baba\n"\
+                                     "id 3 ajout modif doc 5 Coco\n"\
                                     "id 4 ajout medecin 8 Baba\n"\
-                                    "id 5 recherche patient 5 fait le 2021-03-15\n"
+                                    "id 5 recherche patient 5 fait le 2021-03-15\n"\
+                                    "Coco 10 points Baba 16 points Général 5 points "
     def test_list_person(self):
         listTask = ListTasks([
             Task(id=1, task="menu gauche", date=datetime.date(2021, 3, 13), point=5, assign="Cle"),
