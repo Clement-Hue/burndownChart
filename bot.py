@@ -19,7 +19,7 @@ async def chart(ctx, name):
     loader = JsonLoader(f"data/{name}.json")
     burden = loader.load_burden()
     burden.create_chart()
-    await ctx.send(file=discord.File('./burndown/ptrans.png'))
+    await ctx.send(file=discord.File(f'./burndown/{name}.png'))
 
 @bot.command()
 async def tasks(ctx, name):
