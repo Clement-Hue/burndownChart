@@ -5,7 +5,7 @@
         {"id": 1, "task": "coeur + interface: Afficher la liste des patient n'ayant pas encore été en staff", "date": null, "point": 3, "assign":"Baba"},
         {"id": 2, "task": "interface: indicateur patient eligible + liste des doc dans liste patient + bouton ajout au prochain staff" , "date": null, "point": 5, "assign":"Baba"},
         {"id": 3, "task": "coeur: nouveau usecase: ajout patient au prochain staff" , "date": null, "point": 5, "assign": "Clem"},
-        {"id": 4, "task": "coeur: Création de la liste des doc par défault à l'ajout d'un patient" , "date": null, "point": 3, "assign":"Clem"},
+        {"id": 4, "task": "coeur: Création de la liste des doc par défault à l'ajout d'un patient" , "date": "2021-03-27", "point": 3, "assign":"Clem"},
         {"id": 5, "task": "coeur: création nouvelle entité: événement et ses usecases" , "date": null, "point": 8, "assign":"Clem"},
         {"id": 6, "task": "interface: Affichage des événement et réponse du staff dans fiche patient" , "date": null, "point": 8, "assign":"Coco"},
         {"id": 7, "task": "coeur + interface: Ajouter degré d'urgence reponse" , "date": null, "point": 3, "assign":"Baba"},
