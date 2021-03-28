@@ -16,40 +16,40 @@ async def on_ready():
 
 @bot.command()
 async def chart(ctx, name):
-    loader = JsonLoader(f"data/{name}.json")
+    loader = JsonLoader(f"./data/{name}.json")
     burden = loader.load_burden()
     burden.create_chart()
     await ctx.send(file=discord.File(f'./burndown/{name}.png'))
 
 @bot.command()
 async def tasks(ctx, name):
-    burden = JsonLoader(f"data/{name}.json").load_burden()
+    burden = JsonLoader(f"./data/{name}.json").load_burden()
     await ctx.send(burden.listTask.__str__())
 
 @bot.command()
 async def add(ctx,name, task, point):
-    loader = JsonLoader(f"data/{name}.json")
+    loader = JsonLoader(f"./data/{name}.json")
     burden = loader.load_burden()
     burden.listTask.add_task(Task(task=task, point=int(point)))
     await ctx.send("tâche ajouté")
 
 @bot.command()
 async def done(ctx,name, id,date = None):
-    loader = JsonLoader(f"data/{name}.json")
+    loader = JsonLoader(f"./data/{name}.json")
     burden = loader.load_burden()
     burden.listTask.set_task_done(int(id), date)
     await ctx.send(f"tache {id} mis à jour")
 
 @bot.command()
 async def remove(ctx,name ,id):
-    loader = JsonLoader(f"data/{name}.json")
+    loader = JsonLoader(f"./data/{name}.json")
     burden = loader.load_burden()
     burden.listTask.remove_task((int(id)))
     await ctx.send(f"tache {id} retiré")
 
 @bot.command()
 async def progress(ctx, name):
-    loader = JsonLoader(f"data/{name}.json")
+    loader = JsonLoader(f"./data/{name}.json")
     burden = loader.load_burden()
     await ctx.send(burden.progression())
 
