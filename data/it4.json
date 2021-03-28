@@ -14,8 +14,8 @@
         {"id": 10 ,"task": "interface: ajout appel","date":"2021-03-23",  "point": 3, "assign": "Coco"},
         {"id": 11 ,"task": "interface: historic","date":"2021-03-21",  "point": 3, "assign": "Baba"},
         {"id": 12 ,"task": "coeur: l'historique","date":"2021-03-20",  "point": 5, "assign": "Clem"},
-        {"id": 13 ,"task": "coeur: usescases des alertes","date":"2021-03-10",  "point": 8, "assign": "Clem"},
+        {"id": 13 ,"task": "coeur: usescases des appels","date":"2021-03-10",  "point": 8, "assign": "Clem"},
         {"id": 14 ,"task": "coeur: usescases des staff screening","date":"2021-03-11",  "point": 8, "assign": "Clem"},
-        {"id": 15 ,"task": "coeur: liste des alertes","date":"2021-03-15",  "point": 5, "assign": "Clem"}
+        {"id": 15 ,"task": "coeur: liste des alertes","date":"2021-03-18",  "point": 5, "assign": "Clem"}
     ]
 }
