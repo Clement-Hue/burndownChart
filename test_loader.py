@@ -68,10 +68,10 @@ class TestTask(unittest.TestCase):
             Task(id=4, task="ajout medecin", date=None, point=3, assign=None),
             Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=3, assign="Baba"),
         ])
-        burden.listTask.set_task_done(2, datetime.date(2021, 3, 13))
+        burden.listTask.set_task_done(2)
         assert loader.load_burden().listTask == ListTasks([
             Task(id=1, task="menu gauche", date=datetime.date(2021, 3, 15), point=5, assign="Coco"),
-            Task(id=2, task="ajout modif delete patient", date=datetime.date(2021, 3, 13), point=8, assign="Coco"),
+            Task(id=2, task="ajout modif delete patient", date=datetime.date.today(), point=8, assign="Coco"),
             Task(id=3, task="ajout modif doc", date=datetime.date(2021, 3, 15), point=5, assign="Baba"),
             Task(id=4, task="ajout medecin", date=None, point=3, assign=None),
             Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=3, assign="Baba"),
