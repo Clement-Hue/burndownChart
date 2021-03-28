@@ -12,7 +12,7 @@
         {"id": 8, "task": "interface: modif delete appel" , "date": null, "point": 5, "assign":"Coco"},
         {"id": 9, "task": "interface: modif patient info" , "date": null, "point": 5, "assign":"Baba"},
         {"id": 10, "task": "coeur: Alerte événement n'ayant pas de date prévu" , "date": null, "point": 3, "assign":"Clem"},
-        {"id": 11, "task": "interface: amélioration de l'affichage de l'historique (pagination) et staff screening" , "date": null, "point": 5, "assign":"Coco"}
+        {"id": 11, "task": "interface: amélioration de l'affichage de l'historique (pagination) et staff screening" , "date": null, "point": 5, "assign":"Coco"},
         {"id": 12, "task": "coeur: change active des patients vers etat du parcours" , "date": null, "point": 3, "assign":"Clem"}
     ]
 }
