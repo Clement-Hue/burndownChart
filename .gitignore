@@ -1,1 +1,4 @@
 venv
+.idea
+pyenv.cfg
+__pycache__
