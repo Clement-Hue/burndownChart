@@ -18,19 +18,13 @@ async def on_ready():
     print(f'{bot.user} has connected to Discord!')
 
 
-@tasks.loop()
-async def reminder():
-    iter = "it5"
-    list_user = [ bot.get_user(277176072964014080), bot.get_user(358955650736324608), bot.get_user(632328993168818176)]
-    schedule_time = datetime(2021, 3, 31, 14)
+@tasks.loop(hours=24)
+async def reminder(iter):
     await bot.wait_until_ready()
-    while not bot.is_closed():
-        if schedule_time <= datetime.now():
-            for user in list_user:
-                burden = JsonLoader(f"./data/{iter}.json").load_burden()
-                await user.send("Le ptrans a besoin de toi !\n" + burden.listTask.__str__() + "\n" + burden.progression())
-            schedule_time += timedelta(days=1)
-        await asyncio.sleep(60)
+    list_user = [ bot.get_user(277176072964014080), bot.get_user(358955650736324608), bot.get_user(632328993168818176)]
+    for user in list_user:
+        burden = JsonLoader(f"./data/{iter}.json").load_burden()
+        await user.send("Le ptrans a besoin de toi !\n" + burden.listTask.__str__() + "\n" + burden.progression())
 
 
 @bot.command()
@@ -78,6 +72,6 @@ async def progress(ctx, name):
     await ctx.send(burden.progression())
 
 
-reminder.start()
+reminder.start("it5")
 
 bot.run(TOKEN, bot=True)
