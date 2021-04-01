@@ -1,5 +1,104 @@
-{"debut": "2021-03-27", "fin": "2021-04-06", "tasks": 
-	[{"id": 1, "task": "coeur + interface: Afficher la liste des patient n'ayant pas encore \u00e9t\u00e9 en staff (3 liste)", "date": "2021-04-01", "point": 3, "assign": "Baba"}, {"id": 2, "task": "interface: indicateur patient eligible + liste des doc dans liste patient + bouton ajout au prochain staff", "date": null, "point": 5, "assign": "Baba"}, {"id": 3, "task": "coeur: nouveau usecase: ajout patient au prochain staff", "date": "2021-03-29", "point": 8, "assign": "Clem"}, {"id": 4, "task": "coeur: Cr\u00e9ation de la liste des doc par d\u00e9fault \u00e0 l'ajout d'un patient", "date": "2021-03-27", "point": 3, "assign": "Clem"}, {"id": 5, "task": "coeur: cr\u00e9ation nouvelle entit\u00e9: \u00e9v\u00e9nement et ses usecases", "date": null, "point": 8, "assign": "Clem"}, {"id": 6, "task": "interface: Affichage des \u00e9v\u00e9nement et r\u00e9ponse du staff dans fiche patient", "date": null, "point": 8, "assign": "Coco"}, {"id": 7, "task": "coeur + interface: Ajouter degr\u00e9 d'urgence reponse", "date": null, "point": 3, "assign": "Baba"}, {"id": 8, "task": "interface: modif delete appel", "date": null, "point": 5, "assign": "Coco"}, {"id": 9, "task": "interface: modif patient info", "date": null, "point": 5, "assign": "Baba"}, {"id": 10, "task": "coeur: Alerte \u00e9v\u00e9nement n'ayant pas de date pr\u00e9vu", "date": null, "point": 3, "assign": "Clem"}, 
-		{"id": 11, "task": "interface: am\u00e9lioration de l'affichage de l'historique (pagination) et staff screening", "date": null, "point": 5, "assign": "Coco"}, 
-		{"id": 12, "task": "coeur: change active des patients vers etat du parcours", "date": "2021-03-29", "point": 3, "assign": "Clem"}, {"id": 13, "task": "créer liste secrétaire", "point": 5, "assign": "Baba" },
-		{"id":14, "task": "ajout applicaton dans un container", "point": 5, "assign": "Clem" }]}
+{
+	"debut": "2021-03-27",
+	"fin": "2021-04-06",
+	"tasks": [
+		{
+			"id": 1,
+			"task": "coeur + interface: Afficher la liste des patient n'ayant pas encore \u00e9t\u00e9 en staff (3 liste)",
+			"date": "2021-04-01",
+			"point": 3,
+			"assign": "Baba"
+		},
+		{
+			"id": 2,
+			"task": "interface: indicateur patient eligible + liste des doc dans liste patient + bouton ajout au prochain staff",
+			"date": null,
+			"point": 5,
+			"assign": "Baba"
+		},
+		{
+			"id": 3,
+			"task": "coeur: nouveau usecase: ajout patient au prochain staff",
+			"date": "2021-03-29",
+			"point": 8,
+			"assign": "Clem"
+		},
+		{
+			"id": 4,
+			"task": "coeur: Cr\u00e9ation de la liste des doc par d\u00e9fault \u00e0 l'ajout d'un patient",
+			"date": "2021-03-27",
+			"point": 3,
+			"assign": "Clem"
+		},
+		{
+			"id": 5,
+			"task": "coeur: cr\u00e9ation nouvelle entit\u00e9: \u00e9v\u00e9nement et ses usecases",
+			"date": null,
+			"point": 8,
+			"assign": "Clem"
+		},
+		{
+			"id": 6,
+			"task": "interface: Affichage des \u00e9v\u00e9nement et r\u00e9ponse du staff dans fiche patient",
+			"date": null,
+			"point": 8,
+			"assign": "Coco"
+		},
+		{
+			"id": 7,
+			"task": "coeur + interface: Ajouter degr\u00e9 d'urgence reponse",
+			"date": null,
+			"point": 3,
+			"assign": "Baba"
+		},
+		{
+			"id": 8,
+			"task": "interface: modif delete appel",
+			"date": null,
+			"point": 5,
+			"assign": "Coco"
+		},
+		{
+			"id": 9,
+			"task": "interface: modif patient info",
+			"date": null,
+			"point": 5,
+			"assign": "Baba"
+		},
+		{
+			"id": 10,
+			"task": "coeur: Alerte \u00e9v\u00e9nement n'ayant pas de date pr\u00e9vu",
+			"date": null,
+			"point": 3,
+			"assign": "Clem"
+		},
+		{
+			"id": 11,
+			"task": "interface: am\u00e9lioration de l'affichage de l'historique (pagination) et staff screening",
+			"date": null,
+			"point": 5,
+			"assign": "Coco"
+		},
+		{
+			"id": 12,
+			"task": "coeur: change active des patients vers etat du parcours",
+			"date": "2021-03-29",
+			"point": 3,
+			"assign": "Clem"
+		},
+		{
+			"id": 13,
+			"task": "créer liste secrétaire",
+			"date": null,
+			"point": 5,
+			"assign": "Baba"
+		},
+		{
+			"id": 14,
+			"task": "ajout applicaton dans un container",
+			"date": null,
+			"point": 5,
+			"assign": "Clem"
+		}
+	]
+}
