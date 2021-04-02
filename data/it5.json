@@ -95,10 +95,11 @@
 		},
 		{
 			"id": 14,
-			"task": "ajout applicaton dans un container",
+			"task": "prise en compte de plusieurs numéro de tel dans ajout patient et fiche patient",
 			"date": null,
 			"point": 5,
-			"assign": "Clem"
+			"assign": "Coco"
+				
 		}
 	]
 }
