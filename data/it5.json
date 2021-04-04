@@ -24,8 +24,7 @@
             "assign": "Clem"
         },
         {
-            "id": 4,
-            "task": "coeur: Cr\u00e9ation de la liste des doc par d\u00e9fault \u00e0 l'ajout d'un patient",
+            "id": 4, "task": "coeur: Cr\u00e9ation de la liste des doc par d\u00e9fault \u00e0 l'ajout d'un patient",
             "date": "2021-03-27",
             "point": 3,
             "assign": "Clem"
@@ -61,16 +60,9 @@
         {
             "id": 9,
             "task": "coeur: Alerte \u00e9v\u00e9nement n'ayant pas de date pr\u00e9vu",
-            "date": null,
+            "date": "2021-04-04",
             "point": 3,
             "assign": "Clem"
-        },
-        {
-            "id": 10,
-            "task": "interface: am\u00e9lioration de l'affichage de l'historique  et staff screening",
-            "date": null,
-            "point": 5,
-            "assign": "Coco"
         },
         {
             "id": 11,
@@ -89,7 +81,7 @@
         {
             "id": 13,
             "task": "prise en compte de plusieurs num\u00e9ro de tel dans ajout patient et fiche patient",
-            "date": null,
+            "date": "2021-04-04",
             "point": 5,
             "assign": "Coco"
         }
