@@ -18,15 +18,6 @@ async def on_ready():
     print(f'{bot.user} has connected to Discord!')
 
 
-@tasks.loop(hours=24)
-async def reminder(iter):
-    await bot.wait_until_ready()
-    list_user = [ bot.get_user(277176072964014080), bot.get_user(358955650736324608), bot.get_user(632328993168818176)]
-    for user in list_user:
-        burden = JsonLoader(f"./data/{iter}.json").load_burden()
-        await user.send("Le ptrans a besoin de toi !\n" + burden.listTask.__str__() + "\n" + burden.progression())
-
-
 @bot.command()
 async def chart(ctx, name):
     loader = JsonLoader(f"./data/{name}.json")
@@ -72,6 +63,5 @@ async def progress(ctx, name):
     await ctx.send(burden.progression())
 
 
-reminder.start("it5")
 
 bot.run(TOKEN, bot=True)
