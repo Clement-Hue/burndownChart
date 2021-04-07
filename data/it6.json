@@ -1,0 +1,76 @@
+{
+    "debut": "2021-04-08",
+    "fin": "2021-04-18",
+    "tasks": [
+        {
+            "id": 1,
+            "task": "pagination de la liste patient",
+            "date": null,
+            "point": 8,
+            "assign": "Clem"
+        },
+        {
+            "id": 2,
+            "task": "pagination des alertes et filtrage",
+            "date": null,
+            "point": 8,
+            "assign": "Clem"
+        },
+        {
+            "id": 3,
+            "task": "pagination et filtrage de l'historique",
+            "date": null,
+            "point": 8,
+            "assign": "Baba"
+        },
+        {
+            "id":4,
+            "task": "amélioration page staff screening",
+            "date": null,
+            "point": 5,
+            "assign": "Coco"
+        },
+        {
+            "id":5,
+            "task": "ajouter la possibilité de marquer un suivi comme terminé",
+            "date": null,
+            "point": 3,
+            "assign": "Coco"
+        },
+        {
+            "id":6,
+            "task": "affichage de l'historique du patient",
+            "date": null,
+            "point": 5,
+            "assign": "Coco"
+        },
+        {
+            "id":7,
+            "task": "indiquer le degré d'urgence d'un patient suite à la réponse d'un staff",
+            "date": null,
+            "point": 3,
+            "assign": "Baba"
+        },
+        {
+            "id":8,
+            "task": "enregistrer les secrétaires pour avoir une auto-completion",
+            "date": null,
+            "point": 5,
+            "assign": "Baba"
+        },
+        {
+            "id":9,
+            "task": "Afficher réponse staff screening dans la fiche du patient",
+            "date": null,
+            "point": 5,
+            "assign": "Coco"
+        },
+	{
+            "id":10,
+            "task": "coeur: historique d'un patient",
+            "date": null,
+            "point": 3,
+            "assign": "Clem"
+	}
+    ]
+}
