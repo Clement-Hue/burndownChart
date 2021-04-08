@@ -29,7 +29,7 @@ async def chart(ctx, name):
 @bot.command()
 async def tasks(ctx, name):
     burden = JsonLoader(f"./data/{name}.json").load_burden()
-    await ctx.send(burden.listTask.__str__())
+    await ctx.send(burden.__str__())
 
 
 @bot.command()

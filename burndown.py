@@ -52,5 +52,6 @@ class Burndown:
     def show(self):
         self.create_chart().show()
 
-
+    def __str__(self):
+        return f"Du {self.debut} au {self.fin}\n" + self.listTask.__str__()
 

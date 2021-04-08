@@ -130,6 +130,10 @@ class TestTask(unittest.TestCase):
         progress = burndown.progression()
         assert progress == f"Coco: {'{:.2f}'.format((13/21)*100)}% Baba: 100.00% "
 
+    def test_burdown_str(self):
+        burndown = self.burdown_factory()
+        assert burndown.__str__() == "Du 2021-03-12 au 2021-03-20\n" + burndown.listTask.__str__()
+
     def burdown_factory(self):
         return Burndown(debut=datetime.date(2021, 3, 12), fin=datetime.date(2021, 3, 20),
                         listTask=ListTasks([
@@ -140,4 +144,5 @@ class TestTask(unittest.TestCase):
                             Task(id=5, task="recherche patient", date=datetime.date(2021, 3, 15), point=5,
                                  assign="Baba"),
                         ]))
+
 
